@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const { messages } = req.body;
 
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    const res = await fetch("/api/gpt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
